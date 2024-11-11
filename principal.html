@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animales del mundo</title>
+<link rel="stylesheet" href="ESTILOS .CSS">
+<script language="JavaScript">
+    function mueveReloj(){
+        momentoActual = new Date()
+        hora = momentoActual.getHours()
+        minuto = momentoActual.getMinutes()
+        segundo = momentoActual.getSeconds()
+    
+        str_segundo = new String (segundo)
+        if (str_segundo.length == 1)
+           segundo = "0" + segundo
+    
+        str_minuto = new String (minuto)
+        if (str_minuto.length == 1)
+           minuto = "0" + minuto
+    
+        str_hora = new String (hora)
+        if (str_hora.length == 1)
+           hora = "0" + hora
+    
+        horaImprimible = hora + " : " + minuto + " : " + segundo
+    
+        document.form_reloj.reloj.value = horaImprimible
+    
+        setTimeout("mueveReloj()",1000)
+    }
+    </script>
+</head>
+<body onload="mueveReloj()"><div class="fondo">
+    <header>
+        <nav>
+        <ul>
+        <li> <div class="busqueda"><a href="africa.html">Africa</a></div></li>
+        <li><div class="busqueda"><a href="asia.html">Asia</a></div></li>
+        <li><div class="busqueda"><a href="america.html">America</a></div></li>
+        <li><div class="busqueda"><a href="oceania.html">Oceania</a></div></li>
+        <li><div class="busqueda"><a href="europa.html">Europa</a></div></li>
+        <li><div class="busqueda"><a href="principal.html">Principal</a></div></li>
+
+    </ul>
+        </nav>
+        <h1>Animales de los continentes</h1>
+        <form name="form_reloj">
+            <input type="text" name="reloj" size="10" style="background-color : Black; color : White; font-family : Verdana, Arial, Helvetica; font-size : 8pt; text-align : center;" onfocus="window.document.form_reloj.reloj.blur()">
+            </form>
+            
+    </header>
+        <main>
+        <h2 id=»africa»></h2>
+        <h2 id=»asia»></h2>
+        <h2 id=»America»></h2>
+        <h2 id=»Oceania»></h2>
+        <h2 id=»Europa»></h2>
+        </main>
+
+     <p>Esta es una recopilacion de varios animales al rededor del mundo y sus 
+        particularidades
+     </p>
+     
+      <br>
+      <h3>africa</h3>
+       <img src="africa.jpg" alt="imagen de africa">
+
+        <br>
+        <h3>america</h3>
+       <img src="america.jpg" alt="imagen de america">
+      <br>
+      <h3>oceania</h3>
+      <img src="oceania.jpg" alt="imagen de oceania">
+        <br>
+        <h3>asia</h3>
+    <img src="asia.jpg" alt="imagen de asia">
+    <br>
+    <h3>europa</h3>
+    <img src="europa.jpg" alt="imagen de europa">
+    <br>
+    <center>
+        <form action="mailto:morenoguadalupes1108@gmail.com" method="post" enctype="text/plain">
+        elige tu/s continente de animales favorito:<br><br>
+        <input type="checkbox" name="favorito" value="leer">America <br>
+        <input type="checkbox" name="favorito" value="leer">Africa <br>
+        <input type="checkbox" name="favorito" value="leer">Asia <br>
+        <input type="checkbox" name="favorito" value="leer">Europa <br>
+        <input type="checkbox" name="favorito" value="leer">Oceania <br>
+
+        <br><br>
+
+        <input type="submit" value="enviar">
+        <input type="reset" value="borrar">
+        </form>
+        </center>
+   
+     
+  
+</div></body>
+</html>
